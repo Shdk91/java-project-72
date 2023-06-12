@@ -41,11 +41,19 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'io.ebean:ebean-test:13.15.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.10.0'
 }
 
 application {
     mainClass = 'hexlet.code.App'
 }
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
 
 compileJava {
     options.release = 17
