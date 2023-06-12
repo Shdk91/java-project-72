@@ -46,7 +46,7 @@ public abstract class BaseTest {
     }
 
     @AfterEach
-    public void afterEach() {
+    public final void afterEach() {
         database.script().run("/truncate.sql");
         database.script().run("/seed.sql");
     }
